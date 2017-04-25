@@ -1,5 +1,6 @@
 {
-  "private": true,
+  "name": "Reac image webp",
+  "version": "0.1.0",
   "scripts": {
     "build": "webpack --progress --color -p --config ./webpack.prod.config.js",
     "start": "webpack --color --watch & node server.js"
