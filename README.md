@@ -1,5 +1,6 @@
 # React image webp
 ## Basic Info
+[![npm][npm]][npm-url]
 React component for check browser support format webp and insert if supported webp image.
 
 ## Install
@@ -26,7 +27,7 @@ And start to use:
      webp={require('./path/to/webp')}
  />
  ```
- 
+
  ## Available options
  <table>
  <tr>
@@ -55,3 +56,6 @@ And start to use:
  <td>Title text</td>
  </tr>
  </table>
+
+[npm]: https://img.shields.io/npm/v/multi-loader.svg
+[npm-url]: https://www.npmjs.com/package/react-image-webp
