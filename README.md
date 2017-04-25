@@ -3,8 +3,12 @@
 React component for check browser support format webp and insert if supported webp image.
 
 ## Install
+For npm
 ```
 npm install react-image-webp --save-dev
+```
+For yarn
+```
 yarn add react-image-webp
 ```
 
