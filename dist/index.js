@@ -27,14 +27,14 @@ class Image extends Component {
      * @returns {XML}
      */
     render() {
-        const {src, webp} = this.props;
+        const {src, webp, alt, title} = this.props;
         const webpSupport = sessionStorage.getItem('react-webp');
         let image = null;
 
         if (webpSupport === '1') {
-            image = <img src={webp}/>;
+            image = <img src={webp} alt={alt} title={title}/>;
         } else if (webpSupport === '0') {
-            image = <img src={src}/>;
+            image = <img src={src} alt={alt} title={title}/>;
         }
 
         return image;
