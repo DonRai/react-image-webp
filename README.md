@@ -57,5 +57,5 @@ And start to use:
  </tr>
  </table>
 
-[npm]: https://img.shields.io/npm/v/multi-loader.svg
+[npm]: https://img.shields.io/npm/v/react-image-webp.svg
 [npm-url]: https://www.npmjs.com/package/react-image-webp
