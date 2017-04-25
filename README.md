@@ -1,5 +1,6 @@
 # React image webp
 [![npm][npm]][npm-url]
+
 ## Basic Info
 React component for check browser support format webp and insert if supported webp image.
 
@@ -27,8 +28,7 @@ And start to use:
      webp={require('./path/to/webp')}
  />
  ```
-
- ## Available options
+## Available options
  <table>
  <tr>
  <td>Option</td>
