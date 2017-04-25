@@ -1,7 +1,7 @@
 {
   "name": "react-image-webp",
   "description": "React component for check browser support format webp and insert if supported webp image.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "build": "webpack --progress --color -p --config ./webpack.prod.config.js",
     "start": "webpack --color --watch & node server.js"
