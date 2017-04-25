@@ -1,6 +1,6 @@
 # React image webp
-## Basic Info
 [![npm][npm]][npm-url]
+## Basic Info
 React component for check browser support format webp and insert if supported webp image.
 
 ## Install
