@@ -33,21 +33,21 @@ And start to use:
  <tr>
  <td>src</td>
  <td>{string}</td>
- <td>fallback image</td>
+ <td>Path to fallback image if webp doesn't browser support</td>
  </tr>
  <tr>
  <td>webp</td>
  <td>{string}</td>
- <td>webp image</td>
+ <td>Path to webp image</td>
  </tr>
  <tr>
  <td>alt</td>
  <td>{string}</td>
- <td></td>
+ <td>Alternate text</td>
  </tr>
  <tr>
  <td>title</td>
  <td>{string}</td>
- <td></td>
+ <td>Title text</td>
  </tr>
  </table>
