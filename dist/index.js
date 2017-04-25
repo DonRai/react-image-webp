@@ -6,14 +6,12 @@ import React, {Component} from 'react';
 class Image extends Component {
     componentDidMount() {
         if (sessionStorage.getItem('react-webp') === null) {
-            this.testWebP(this.notify());
+            this.testWebP(this.setToSession());
         }
     }
 
-    notify(support) {
-        support
-            ? sessionStorage.setItem('react-webp', '1')
-            : sessionStorage.setItem('react-webp', '0')
+    setToSession(support) {
+        sessionStorage.setItem('react-webp', support ? '1' : '0');
     }
 
     testWebP(callback) {
@@ -33,9 +31,9 @@ class Image extends Component {
         const webpSupport = sessionStorage.getItem('react-webp');
         let image = null;
 
-        if(webpSupport === '1'){
+        if (webpSupport === '1') {
             image = <img src={webp}/>;
-        } else if(webpSupport === '0'){
+        } else if (webpSupport === '0') {
             image = <img src={src}/>;
         }
 
