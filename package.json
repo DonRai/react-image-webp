@@ -1,6 +1,6 @@
 {
   "name": "react-image-webp",
-  "version": "0.1.4",
+  "version": "0.1.9",
   "description": "React component for check browser support format webp and insert if supported webp image.",
   "repository": {
     "type": "git",
@@ -11,12 +11,13 @@
     "webp",
     "images"
   ],
-  "bin": "./dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "webpack --progress --color -p --config ./webpack.prod.config.js",
+    "build": "babel modules/ --out-dir dist/",
     "start": "webpack --color --watch & node server.js"
   },
   "devDependencies": {
+    "babel-cli": "^6.9.0",
     "babel-core": "^6.17.0",
     "babel-eslint": "^7.0.0",
     "babel-loader": "^6.2.5",
