@@ -4,7 +4,7 @@
 ## Basic Info
 React component for check browser support format webp and insert if supported webp image.
 
-## Install
+## Installation
 For npm
 ```
 npm install react-image-webp --save-dev
@@ -14,14 +14,14 @@ For yarn
 yarn add react-image-webp
 ```
 
-## How it work
+## How it working
 
 Import component in file
 ```
 import Image from 'react-image-webp';
 ```
 
-And start to use:
+And start use:
 ```
 <Image
      src={require('./path/to/image')}
@@ -31,28 +31,28 @@ And start to use:
 ## Available options
  <table>
  <tr>
- <td>Option</td>
- <td>Type</td>
- <td>Description</td>
+ <td><strong>property</strong></td>
+ <td><strong>type</strong></td>
+ <td><strong>description</strong></td>
  </tr>
  <tr>
  <td>src</td>
- <td>{string}</td>
+ <td>string</td>
  <td>Path to fallback image if webp doesn't browser support</td>
  </tr>
  <tr>
  <td>webp</td>
- <td>{string}</td>
+ <td>string</td>
  <td>Path to webp image</td>
  </tr>
  <tr>
  <td>alt</td>
- <td>{string}</td>
+ <td>string</td>
  <td>Alternate text</td>
  </tr>
  <tr>
  <td>title</td>
- <td>{string}</td>
+ <td>string</td>
  <td>Title text</td>
  </tr>
  </table>
