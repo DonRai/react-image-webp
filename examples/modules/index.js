@@ -10,8 +10,12 @@ class TestImage extends React.Component {
     render() {
         return (
             <Image
-                src={require('./images/1.jpg')}
-                webp={require('./images/1.webp')}
+                className="image"
+                style={{width: '300px'}}
+                title="text"
+                alt="Alternate title"
+                src="./modules/images/1.jpg"
+                webp="./modules/images/1.webp"
             />
         );
     }

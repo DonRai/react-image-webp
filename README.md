@@ -2,7 +2,7 @@
 [![npm][npm]][npm-url]
 
 ## Basic Info
-React component for check browser support format webp and insert if supported webp image.
+React component for check browser support format WebP and insert if supported WebP image. More about WebP https://developers.google.com/speed/webp/
 
 ## Installation
 For npm
@@ -38,12 +38,12 @@ And start use:
  <tr>
  <td>src</td>
  <td>string</td>
- <td>Path to fallback image if webp doesn't browser support</td>
+ <td>Path to fallback image if WebP doesn't browser support</td>
  </tr>
  <tr>
- <td>webp</td>
+ <td>WebP</td>
  <td>string</td>
- <td>Path to webp image</td>
+ <td>Path to WebP image</td>
  </tr>
  <tr>
  <td>alt</td>
@@ -54,6 +54,16 @@ And start use:
  <td>title</td>
  <td>string</td>
  <td>Title text</td>
+ </tr>
+ <tr>
+ <td>style</td>
+ <td>object</td>
+ <td>Style for image</td>
+ </tr>
+ <tr>
+ <td>className</td>
+ <td>string</td>
+ <td>Class name for image</td>
  </tr>
  </table>
 
