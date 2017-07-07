@@ -31,51 +31,48 @@ var Image = function (_Component) {
     }
 
     _createClass(Image, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            if (sessionStorage.getItem('react-webp') === null) {
-                this.testWebP(this.setToSession());
+        key: 'canUseWebP',
+
+        /**
+         * Check browser webp support
+         * @returns {boolean}
+         */
+        value: function canUseWebP() {
+            var elem = document.createElement('canvas');
+
+            if (!!(elem.getContext && elem.getContext('2d'))) {
+                // was able or not to get WebP representation
+                return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+            } else {
+                // very old browser like IE 8, canvas not supported
+                return false;
             }
         }
-    }, {
-        key: 'setToSession',
-        value: function setToSession(support) {
-            sessionStorage.setItem('react-webp', support ? '1' : '0');
-        }
-    }, {
-        key: 'testWebP',
-        value: function testWebP(callback) {
-            var webP = new Image();
-            webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-            webP.onload = webP.onerror = function () {
-                callback(webP.height === 2);
-            };
-        }
-    }, {
-        key: 'render',
-
 
         /**
          * Render jsx to html
          * @returns {XML}
          */
+
+    }, {
+        key: 'render',
         value: function render() {
             var _props = this.props,
                 src = _props.src,
                 webp = _props.webp,
                 alt = _props.alt,
-                title = _props.title;
+                title = _props.title,
+                style = _props.style,
+                className = _props.className;
 
-            var webpSupport = sessionStorage.getItem('react-webp');
-            var image = null;
+            var webpSupport = this.canUseWebP();
+            var image = src;
 
-            if (webpSupport === '1') {
-                image = _react2.default.createElement('img', { src: webp, alt: alt, title: title });
-            } else if (webpSupport === '0') {
-                image = _react2.default.createElement('img', { src: src, alt: alt, title: title });
+            if (webpSupport === true) {
+                image = webp;
             }
 
-            return image;
+            return _react2.default.createElement('img', { src: image, alt: alt, title: title, style: style, className: className });
         }
     }]);
 

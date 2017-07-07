@@ -4,40 +4,36 @@ import React, {Component} from 'react';
  * Default class for Image webp
  */
 class Image extends Component {
-    componentDidMount() {
-        if (sessionStorage.getItem('react-webp') === null) {
-            this.testWebP(this.setToSession());
+    /**
+     * Check browser webp support
+     * @returns {boolean}
+     */
+    canUseWebP() {
+        const elem = document.createElement('canvas');
+
+        if (!!(elem.getContext && elem.getContext('2d'))) {
+            // was able or not to get WebP representation
+            return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+        } else {
+            // very old browser like IE 8, canvas not supported
+            return false;
         }
     }
-
-    setToSession(support) {
-        sessionStorage.setItem('react-webp', support ? '1' : '0');
-    }
-
-    testWebP(callback) {
-        const webP = new Image();
-        webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-        webP.onload = webP.onerror = function () {
-            callback(webP.height === 2);
-        };
-    };
 
     /**
      * Render jsx to html
      * @returns {XML}
      */
     render() {
-        const {src, webp, alt, title} = this.props;
-        const webpSupport = sessionStorage.getItem('react-webp');
-        let image = null;
+        const {src, webp, alt, title, style, className} = this.props;
+        const webpSupport = this.canUseWebP();
+        let image = src;
 
-        if (webpSupport === '1') {
-            image = <img src={webp} alt={alt} title={title}/>;
-        } else if (webpSupport === '0') {
-            image = <img src={src} alt={alt} title={title}/>;
+        if (webpSupport === true) {
+            image = webp;
         }
 
-        return image;
+        return <img src={image} alt={alt} title={title} style={style} className={className}/>;
     }
 }
 
