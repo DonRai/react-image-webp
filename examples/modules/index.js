@@ -11,7 +11,7 @@ class TestImage extends React.Component {
         return (
             <Image
                 className="image"
-                style={{width: '300px'}}
+                style={{width: '550px'}}
                 title="text"
                 alt="Alternate title"
                 src="./modules/images/1.jpg"
