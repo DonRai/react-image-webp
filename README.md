@@ -41,7 +41,7 @@ And start use:
  <td>Path to fallback image if WebP doesn't browser support</td>
  </tr>
  <tr>
- <td>WebP</td>
+ <td>webp</td>
  <td>string</td>
  <td>Path to WebP image</td>
  </tr>
