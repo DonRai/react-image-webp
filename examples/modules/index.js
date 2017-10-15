@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Image from 'react-image-webp';
 
-class TestImage extends React.Component {
+class TestImage extends Component {
     /**
      * Render jsx to html
      * @returns {XML}
@@ -21,7 +21,4 @@ class TestImage extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <TestImage />,
-    document.getElementById('root')
-);
+ReactDOM.render(<TestImage/>, document.getElementById('root'));

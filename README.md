@@ -2,6 +2,7 @@
 [![npm][npm]][npm-url]
 
 ## Basic Info
+Tiny component 2 KB.
 React component for check browser support format WebP and insert if supported WebP image. More about WebP https://developers.google.com/speed/webp/
 
 ## Online example
