@@ -2314,9 +2314,9 @@ react-dom@^15.6.1:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-image-webp@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/react-image-webp/-/react-image-webp-0.2.0.tgz#eff9278c9c50585907e6226b54ca86cc5fde693a"
+react-image-webp@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/react-image-webp/-/react-image-webp-0.2.1.tgz#eaf303fcccf8dd40e1c0d99af7bffa0bd99e8f17"
   dependencies:
     react "^15.5.4"
 
