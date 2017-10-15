@@ -1,9 +1,8 @@
 # React image webp
 [![npm][npm]][npm-url]
+![](http://img.badgesize.io/DonRai/react-image-webp/master/dist/index.js.svg?compression=gzip)
 
 ## Basic Info
-Tiny component 2 KB.
-
 React component for check browser support format WebP and insert if supported WebP image. More about WebP https://developers.google.com/speed/webp/
 
 As of October 2017, global WebP Support from browsers is 73.64% – caniuse.com
