@@ -9,7 +9,7 @@ class Image extends Component {
      * @returns {boolean}
      */
     canUseWebP() {
-        const elem = document.createElement('canvas');
+        const elem = typeof document === 'object' ? document.createElement('canvas') : {};
 
         if (!!(elem.getContext && elem.getContext('2d'))) {
             // was able or not to get WebP representation
