@@ -1,5 +1,6 @@
 # React image webp
 [![npm][npm]][npm-url]
+![](http://img.badgesize.io/DonRai/react-image-webp/master/dist/index.js.svg?compression=gzip)
 
 ## Basic Info
 Tiny component 2 KB.
