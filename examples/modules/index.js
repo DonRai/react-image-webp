@@ -9,14 +9,17 @@ class TestImage extends Component {
      */
     render() {
         return (
-            <Image
-                className="image"
-                style={{width: '550px'}}
-                title="text"
-                alt="Alternate title"
-                src="./modules/images/1.jpg"
-                webp="./modules/images/1.webp"
-            />
+            <div>
+                <h1>Check in network what image webp or png</h1>
+                <Image
+                    className="image"
+                    style={{width: '550px'}}
+                    title="text"
+                    alt="Alternate title"
+                    src="./modules/images/1.jpg"
+                    webp="./modules/images/1.webp"
+                />
+            </div>
         );
     }
 }
