@@ -5,7 +5,7 @@
 ## Basic Info
 React component for check browser support format WebP and insert if supported WebP image. More about WebP https://developers.google.com/speed/webp/
 
-As of October 2017, global WebP Support from browsers is 73.64% – caniuse.com
+As of October 2018, global WebP Support from browsers is 72.95% – caniuse.com
 
 ## Online example
 Check in developer console image format (webp or jpg).
