@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import ReactDOM from 'react-dom';
 import Image from 'react-image-webp';
 
@@ -9,17 +9,17 @@ class TestImage extends Component {
      */
     render() {
         return (
-            <div>
-                <h1>Check in network what image webp or png</h1>
+            <Fragment>
+                <h1>Check in browser network which type of image was rendered.</h1>
                 <Image
                     className="image"
                     style={{width: '550px'}}
                     title="text"
                     alt="Alternate title"
-                    src="./modules/images/1.jpg"
-                    webp="./modules/images/1.webp"
+                    src={require("./../static/images/1.jpg")}
+                    webp={require("./../static/images/1.webp")}
                 />
-            </div>
+            </Fragment>
         );
     }
 }
