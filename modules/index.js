@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
+let support = undefined;
 /**
  * Default class for Image webp
  */
@@ -9,14 +10,20 @@ class Image extends Component {
      * @returns {boolean}
      */
     canUseWebP() {
+
+        if (support !== undefined)
+            return support;
+
         const elem = typeof document === 'object' ? document.createElement('canvas') : {};
 
         if (!!(elem.getContext && elem.getContext('2d'))) {
             // was able or not to get WebP representation
-            return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+            support = elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+            return support;
         } else {
             // very old browser like IE 8, canvas not supported
-            return false;
+            support = false;
+            return support;
         }
     }
 
@@ -25,7 +32,7 @@ class Image extends Component {
      * @returns {XML}
      */
     render() {
-        const {src, webp, alt, title, style, className} = this.props;
+        const { src, webp, alt, title, style, className } = this.props;
         const webpSupport = this.canUseWebP();
         let image = src;
 
@@ -33,7 +40,7 @@ class Image extends Component {
             image = webp;
         }
 
-        return <img src={image} alt={alt} title={title} style={style} className={className}/>;
+        return <img src={image} alt={alt} title={title} style={style} className={className} />;
     }
 }
 
