@@ -20,16 +20,24 @@ yarn add react-image-webp
 ## Guide
 
 Import component in file
-```
+```js
 import Image from 'react-image-webp';
+```
+or you can import just small function (209 B)
+```js
+import {isWebpSupported} from 'react-image-webp/dist/utils';
 ```
 
 And start use:
-```
+```js
 <Image
      src={require('./path/to/image')}
      webp={require('./path/to/webp')}
  />
+ ```
+ or
+ ```js
+{isWebpSupported() ? <img src={require('./path/to/img.webp')} /> : <img src={require('./path/to/img.png')} /> }
  ```
 ## Props
  <table>
