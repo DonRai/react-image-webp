@@ -20,9 +20,11 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var support = undefined;
 /**
  * Default class for Image webp
  */
+
 var Image = function (_Component) {
     _inherits(Image, _Component);
 
@@ -40,14 +42,19 @@ var Image = function (_Component) {
          * @returns {boolean}
          */
         value: function canUseWebP() {
+
+            if (support !== undefined) return support;
+
             var elem = (typeof document === 'undefined' ? 'undefined' : _typeof(document)) === 'object' ? document.createElement('canvas') : {};
 
             if (!!(elem.getContext && elem.getContext('2d'))) {
                 // was able or not to get WebP representation
-                return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+                support = elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+                return support;
             } else {
                 // very old browser like IE 8, canvas not supported
-                return false;
+                support = false;
+                return support;
             }
         }
 
