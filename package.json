@@ -14,9 +14,17 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel modules/ --out-dir dist/",
-    "minify": "minify dist -d dist"
+    "minify": "minify dist -d dist",
+    "size-limit": "size-limit"
   },
+  "size-limit": [
+    {
+      "path": "dist/index.js",
+      "limit": "3.55 KB"
+    }
+  ],
   "devDependencies": {
+    "@size-limit/preset-small-lib": "^2.1.6",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
