@@ -1,6 +1,6 @@
 {
   "name": "react-image-webp",
-  "version": "0.4.1",
+  "version": "0.5.1",
   "description": "React component for check browser support format webp and insert if supported webp image.",
   "repository": {
     "type": "git",
@@ -21,6 +21,10 @@
     {
       "path": "dist/index.js",
       "limit": "3.55 KB"
+    },
+    {
+      "path": "dist/utils/index.js",
+      "limit": "209 B"
     }
   ],
   "devDependencies": {

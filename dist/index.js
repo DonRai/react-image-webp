@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _utils = require('./utils');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20,11 +20,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var support = undefined;
 /**
  * Default class for Image webp
  */
-
 var Image = function (_Component) {
     _inherits(Image, _Component);
 
@@ -35,36 +33,12 @@ var Image = function (_Component) {
     }
 
     _createClass(Image, [{
-        key: 'canUseWebP',
-
-        /**
-         * Check browser webp support
-         * @returns {boolean}
-         */
-        value: function canUseWebP() {
-
-            if (support !== undefined) return support;
-
-            var elem = (typeof document === 'undefined' ? 'undefined' : _typeof(document)) === 'object' ? document.createElement('canvas') : {};
-
-            if (!!(elem.getContext && elem.getContext('2d'))) {
-                // was able or not to get WebP representation
-                support = elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-                return support;
-            } else {
-                // very old browser like IE 8, canvas not supported
-                support = false;
-                return support;
-            }
-        }
+        key: 'render',
 
         /**
          * Render jsx to html
          * @returns {XML}
          */
-
-    }, {
-        key: 'render',
         value: function render() {
             var _props = this.props,
                 src = _props.src,
@@ -74,7 +48,7 @@ var Image = function (_Component) {
                 style = _props.style,
                 className = _props.className;
 
-            var webpSupport = this.canUseWebP();
+            var webpSupport = (0, _utils.isWebpSupported)();
             var image = src;
 
             if (webpSupport === true) {
