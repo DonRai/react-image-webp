@@ -2,16 +2,17 @@
   "name": "react-image-webp",
   "main": "dist/index.js",
   "scripts": {
+    "dev": "parcel index.html",
     "build": "parcel index.html"
   },
   "dependencies": {
-    "parcel-bundler": "^1.12.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-image-webp": "^0.3.0"
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-image-webp": "^0.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-react": "^7.0.0"
+    "@babel/core": "^7.6.4",
+    "@babel/preset-react": "^7.6.3"
   }
 }
