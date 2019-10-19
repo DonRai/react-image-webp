@@ -7,6 +7,10 @@ React component for check browser support format WebP and insert if supported We
 
 As of October 2019, global WebP Support from browsers is 79.52% – caniuse.com
 
+## Features
+- Small component for React.js (3.55 KB)
+- Small function (167 B)
+
 ## Installation
 For npm
 ```
@@ -23,7 +27,7 @@ Import component in file
 ```js
 import Image from 'react-image-webp';
 ```
-or you can import just small function (209 B)
+or you can import just small function (167 B)
 ```js
 import {isWebpSupported} from 'react-image-webp/dist/utils';
 ```
