@@ -2,21 +2,17 @@
   "name": "react-image-webp",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack --progress --color -p --config ./webpack.config.js"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.9.0",
-    "babel-core": "^6.17.0",
-    "babel-loader": "^6.2.5",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
-    "babel-preset-stage-0": "^6.22.0",
-    "webpack": "^3.1.0"
+    "dev": "parcel index.html",
+    "build": "parcel index.html"
   },
   "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.6.1",
-    "react-image-webp": "^0.2.2",
-    "url-loader": "^0.5.9"
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-image-webp": "^0.4.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-react": "^7.6.3"
   }
 }

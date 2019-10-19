@@ -2,14 +2,10 @@
 [![npm][npm]][npm-url]
 ![](http://img.badgesize.io/DonRai/react-image-webp/master/dist/index.js.svg?compression=gzip)
 
-## Basic Info
+## Description
 React component for check browser support format WebP and insert if supported WebP image. More about WebP https://developers.google.com/speed/webp/
 
-As of October 2017, global WebP Support from browsers is 73.64% – caniuse.com
-
-## Online example
-Check in developer console image format (webp or jpg).
-https://donrai.github.io/react-image-webp/examples/index.html
+As of October 2019, global WebP Support from browsers is 79.52% – caniuse.com
 
 ## Installation
 For npm
@@ -21,21 +17,29 @@ For yarn
 yarn add react-image-webp
 ```
 
-## How it working
+## Guide
 
 Import component in file
-```
+```js
 import Image from 'react-image-webp';
+```
+or you can import just small function (209 B)
+```js
+import {isWebpSupported} from 'react-image-webp/dist/utils';
 ```
 
 And start use:
-```
+```js
 <Image
      src={require('./path/to/image')}
      webp={require('./path/to/webp')}
  />
  ```
-## Available options
+ or
+ ```js
+{isWebpSupported() ? <img src={require('./path/to/img.webp')} /> : <img src={require('./path/to/img.png')} /> }
+ ```
+## Props
  <table>
  <tr>
  <td><strong>property</strong></td>

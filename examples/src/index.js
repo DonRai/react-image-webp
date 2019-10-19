@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import ReactDOM from 'react-dom';
 import Image from 'react-image-webp';
+import {isWebpSupported} from 'react-image-webp/dist/utils';
 
 class TestImage extends Component {
     /**
@@ -9,17 +10,18 @@ class TestImage extends Component {
      */
     render() {
         return (
-            <div>
-                <h1>Check in network what image webp or png</h1>
+            <Fragment>
+                <h1>Check in browser network which type of image was rendered.</h1>
+                <h2>This picture is {isWebpSupported() ? '.webp' : '.jpg'}</h2>
                 <Image
                     className="image"
                     style={{width: '550px'}}
                     title="text"
                     alt="Alternate title"
-                    src="./modules/images/1.jpg"
-                    webp="./modules/images/1.webp"
+                    src={require("./../static/images/1.jpg")}
+                    webp={require("./../static/images/1.webp")}
                 />
-            </div>
+            </Fragment>
         );
     }
 }

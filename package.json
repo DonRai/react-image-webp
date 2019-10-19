@@ -1,6 +1,6 @@
 {
   "name": "react-image-webp",
-  "version": "0.2.2",
+  "version": "0.5.1",
   "description": "React component for check browser support format webp and insert if supported webp image.",
   "repository": {
     "type": "git",
@@ -14,18 +14,31 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel modules/ --out-dir dist/",
-    "minify": "minify dist -d dist"
+    "minify": "minify dist -d dist",
+    "size-limit": "size-limit"
   },
+  "size-limit": [
+    {
+      "path": "dist/index.js",
+      "limit": "3.55 KB"
+    },
+    {
+      "path": "dist/utils/index.js",
+      "limit": "209 B"
+    }
+  ],
   "devDependencies": {
-    "babel-minify": "^0.2.0",
-    "babel-cli": "^6.9.0",
-    "babel-core": "^6.17.0",
-    "babel-loader": "^6.2.5",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
-    "babel-preset-stage-0": "^6.22.0"
+    "@size-limit/preset-small-lib": "^2.1.6",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-minify": "^0.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
   },
   "dependencies": {
-    "react": "^15.5.4"
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   }
 }
