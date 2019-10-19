@@ -7,6 +7,10 @@ React component for check browser support format WebP and insert if supported We
 
 As of October 2019, global WebP Support from browsers is 79.52% – caniuse.com
 
+## Features
+- Small component for React.js (3.55 KB)
+- Small function (209 B)
+
 ## Installation
 For npm
 ```
