@@ -4179,10 +4179,10 @@ react-dom@^16.10.2:
     prop-types "^15.6.2"
     scheduler "^0.16.2"
 
-react-image-webp@^0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/react-image-webp/-/react-image-webp-0.4.3.tgz#b22783cdeff97a6df7cf7e2b28e38bcee01e773b"
-  integrity sha512-Sp2ZeEZAsU48dEqXqiQv1s0uYvTyTswJnm8NXFVlStpJPezHvMHjrBblGv91hvM46YCG7PUWfbt5D5jlfiI+UA==
+react-image-webp@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/react-image-webp/-/react-image-webp-0.5.2.tgz#951cb8a0475bdcbdd48ee9da02c1aba32a233c17"
+  integrity sha512-84TM1HbndYnIMX2rmZg9XRX9V6ODGErYiKNcDrtNf/MvB6fOtvinwm9NkJfjKGw9kOQDYPPHlzykwB8tpAfOhw==
   dependencies:
     react "^16.10.2"
     react-dom "^16.10.2"
