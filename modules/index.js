@@ -5,7 +5,7 @@ import {isWebpSupported} from './utils';
 /**
  * Default functional component for Image webp
  */
-export const Image = ({ src, webp, alt, title, style, className, ...rest }) => {
+const Image = ({ src, webp, alt, title, style, className, ...rest }) => {
     const webpSupport = isWebpSupported();
     let image = src;
 
