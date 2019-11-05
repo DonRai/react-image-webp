@@ -11,7 +11,7 @@ class Image extends Component {
      * @returns {XML}
      */
     render() {
-        const { src, webp, alt, title, style, className } = this.props;
+        const { src, webp, alt, title, style, className, ...rest } = this.props;
         const webpSupport = isWebpSupported();
         let image = src;
 
@@ -19,7 +19,7 @@ class Image extends Component {
             image = webp;
         }
 
-        return <img src={image} alt={alt} title={title} style={style} className={className} />;
+        return <img {...rest} src={image} alt={alt} title={title} style={style} className={className} />;
     }
 }
 
