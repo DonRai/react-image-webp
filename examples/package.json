@@ -7,12 +7,12 @@
   },
   "dependencies": {
     "parcel-bundler": "^1.12.4",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-image-webp": "^0.5.2"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-image-webp": "^0.6.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-react": "^7.6.3"
+    "@babel/core": "^7.8.3",
+    "@babel/preset-react": "^7.8.3"
   }
 }

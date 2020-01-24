@@ -2,6 +2,20 @@
 [![npm][npm]][npm-url]
 ![](http://img.badgesize.io/DonRai/react-image-webp/master/dist/index.js.svg?compression=gzip)
 
+## <picture> instead of this library
+I highly recommend using HTML <picture> for trying load webp images. And using this library for very specific cases.
+Example for native HTML <picture>:
+```js
+<picture>
+  <source srcset="logo.webp" type="image/webp">
+  <img src="logo.png" alt="logo">
+</picture>
+```
+
+Links:
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture
+- https://css-tricks.com/using-webp-images/#article-header-id-3
+
 ## Description
 React component for check browser support format WebP and insert if supported WebP image. More about WebP https://developers.google.com/speed/webp/
 
@@ -12,11 +26,11 @@ As of October 2019, global WebP Support from browsers is 79.52% – caniuse.com
 - Small function (167 B)
 
 ## Installation
-For npm
+NPM
 ```
 npm install react-image-webp --save-dev
 ```
-For yarn
+Yarn
 ```
 yarn add react-image-webp
 ```
