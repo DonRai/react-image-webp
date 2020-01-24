@@ -1,26 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import {isWebpSupported} from './utils';
 
 /**
- * Default class for Image webp
+ * Default functional component for Image webp
  */
-class Image extends Component {
-    /**
-     * Render jsx to html
-     * @returns {XML}
-     */
-    render() {
-        const { src, webp, alt, title, style, className, ...rest } = this.props;
-        const webpSupport = isWebpSupported();
-        let image = src;
+const Image = ({ src, webp, alt, title, style, className, ...rest }) => {
+    const webpSupport = isWebpSupported();
+    let image = src;
 
-        if (webpSupport === true) {
-            image = webp;
-        }
-
-        return <img {...rest} src={image} alt={alt} title={title} style={style} className={className} />;
+    if (webpSupport === true) {
+      image = webp;
     }
+    /**
+    * Render jsx to html
+    * @returns {XML}
+    */
+    return <img {...rest} src={image} alt={alt} title={title} style={style} className={className} />;
 }
 
 export default Image;
