@@ -1,12 +1,7 @@
 declare module 'react-image-webp' {
   import React from 'react';
-  interface ImageProps {
-    src: string;
+  interface ImageProps extends React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> {
     webp?: string;
-    alt?: string;
-    title?: string;
-    style?: { [ key: string ]: object };
-    className?: string;
   }
   export default class Image extends React.Component<ImageProps, any> {}
 }
