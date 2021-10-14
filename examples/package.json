@@ -9,10 +9,10 @@
     "parcel-bundler": "^1.12.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-image-webp": "^0.7.0"
+    "react-image-webp": "^0.8.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.3",
-    "@babel/preset-react": "^7.8.3"
+    "@babel/core": "^7.15.8",
+    "@babel/preset-react": "^7.14.5"
   }
 }

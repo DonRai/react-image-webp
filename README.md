@@ -2,8 +2,8 @@
 [![npm][npm]][npm-url]
 ![](http://img.badgesize.io/DonRai/react-image-webp/master/dist/index.js.svg?compression=gzip)
 
-## <picture> instead of this library
-I highly recommend using HTML <picture> for trying load webp images. And using this library for very specific cases.
+## HTML Picture instead of this library
+I highly recommend using HTML <picture> for trying load WebP images. And using this library for very specific cases.
 Example for native HTML <picture>:
 ```js
 <picture>
@@ -19,7 +19,7 @@ Links:
 ## Description
 React component for check browser support format WebP and insert if supported WebP image. More about WebP https://developers.google.com/speed/webp/
 
-As of October 2019, global WebP Support from browsers is 79.52% – caniuse.com
+As of October 2021, global WebP Support from browsers is 95.31% – caniuse.com
 
 ## Features
 - Small component for React.js (3.55 KB)
@@ -49,13 +49,15 @@ import {isWebpSupported} from 'react-image-webp/dist/utils';
 And start use:
 ```js
 <Image
-     src={require('./path/to/image')}
-     webp={require('./path/to/webp')}
+  src={require('./path/to/image')}
+  webp={require('./path/to/webp')}
  />
  ```
  or
  ```js
-{isWebpSupported() ? <img src={require('./path/to/img.webp')} /> : <img src={require('./path/to/img.png')} /> }
+isWebpSupported()
+  ? <img src="./path/to/img.webp" />
+  : <img src="./path/to/img.png" />
  ```
 ## Props
  <table>
